@@ -1,0 +1,42 @@
+.menu-panel {
+    display: flex;
+    justify-content: center;
+}
+
+.section__menu-panel {
+margin-bottom: 50px;
+}
+
+.menu-panel__item {
+    margin-right: 8px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.menu-panel__button {
+    border: transparent;
+    border-radius: 4px;
+    text-align: center;
+    padding: 6px 22px;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    transition: background-color 250ms var(--timing-function),
+        color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        color: #fff;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    &:active {
+        background-color: var(--accent-color);
+        color: #fff;
+    }
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,14 +16,20 @@
 
 <body class="body">
     <!-- header -->
-         <header class="page-header">
+    <header class="page-header">
         <!-- навигация -->
         <div class="container container__page-header">
-            <nav class="navigation-wrapper">
-                <a href="./index.html" class="page-header__logo logo">Web<span
-                        class="logo__black">Studio
-                    </span>
-                </a>
+            <a href="./index.html" class="page-header__logo logo">Web<span class="logo__black">Studio</span>
+            </a>
+            <button type="button" class="page-header__menu-button" aria-expanded="false" aria-controls="menu"
+                data-menu-button>
+                <svg class="page-header__menu-icon" width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use class="page-header__menu-burger" href="./images/sprite.svg#icon-burger"></use>
+                    <use class="page-header__menu-close" href="./images/sprite.svg#icon-close"></use>
+                </svg>
+            </button>
+            <div class="menu" id="menu" data-menu>
+                <nav class="navigation-wrapper">
                     <ul class="site-nav">
                         <li class="site-nav__item">
                             <a href="./index.html" class="site-nav__link">Студия</a>
@@ -35,213 +42,333 @@
                         </li>
                     </ul>
                 </nav>
-            
-                <ul class="page-header__contacts contacts">
-                    <li class="contacts__item">
-                        <a href="mailto:info@devstudio.com" class="contacts__link">
-                            <svg class="contacts__icon" width="16" height="12">
-                                <use href="./images/sprite.svg#icon-mail"></use>
-                            </svg>info@devstudio.com
+                <div class="contacts-list">
+                    <ul class="page-header__contacts contacts">
+                        <li class="contacts__item">
+                            <a href="mailto:info@devstudio.com" class="contacts__link contacts__link--mail">
+                                <svg class="contacts__icon contacts__icon--mail" width="16" height="12">
+                                    <use href="./images/sprite.svg#icon-mail"></use>
+                                </svg>info@devstudio.com
+                            </a>
+                        </li>
+                        <li class="contacts__item">
+                            <a href="tel:+380961111111" class="contacts__link contacts__link--phone">
+                                <svg class="contacts__icon contacts__icon--phone" width="10" height="16">
+                                    <use href="./images/sprite.svg#icon-smartphone"></use>
+                                </svg>+38 096 111 11 11
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="contacts-list__social">
+                        <li class="contacts-list__social-item">
+                            <a class="contacts-list__social-link">Instagram</a>
+                        </li>
+                        <li class="contacts-list__social-item">
+                            <a class="contacts-list__social-link">Twitter</a>
+                        </li>
+                        <li class="contacts-list__social-item">
+                            <a class="contacts-list__social-link">Facebook</a>
+                        </li>
+                        <li class="contacts-list__social-item">
+                            <a class="contacts-list__social-link">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <section class="section">
+            <div class="container">
+                <h1 class="section__title visually-hidden">Портфолио</h1>
+                <ul class="section__menu-panel menu-panel">
+                    <li class="menu-panel__item">
+                        <button type="button" class="menu-panel__button">Все</button>
+                    </li>
+                    <li class="menu-panel__item">
+                        <button type="button" class="menu-panel__button">Веб-сайты</button>
+                    </li>
+                    <li class="menu-panel__item">
+                        <button type="button" class="menu-panel__button">Приложения</button>
+                    </li>
+                    <li class="menu-panel__item">
+                        <button type="button" class="menu-panel__button">Дизайн</button>
+                    </li>
+                    <li class="menu-panel__item">
+                        <button type="button" class="menu-panel__button">Маркетинг</button>
+                    </li>
+                </ul>
+                <!-- галерея портфолио -->
+                <ul class="section__portfolio portfolio">
+                    <li class="portfolio__item">
+                        <a href="/" class="portfolio__link">
+                            <div class="portfolio__thumb">
+                                <picture>
+                                    <source
+                                        srcset="./images/desktop/portfolio/techno_crack.jpg 1x, ./images/desktop/portfolio/techno_crack@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/tablet/portfolio/techno_crack_tab.jpg 1x, ./images/tablet/portfolio/techno_crack_tab@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/mobile/portfolio/techno_crack_mob.jpg 1x, ./images/mobile/portfolio/techno_crack_mob@2x.jpg 2x"
+                                        media="(min-width: 480px)">
+                                    <img class="portfolio__img" src="./images/desktop/portfolio/techno_crack.jpg"
+                                        alt="Технокряк" width="370" />
+                                </picture>
+                                <p class="portfolio__overlay">Технокряк это современная площадка распространения
+                                    коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на
+                                    защищённые сервера конкурентов.</p>
+                            </div>
+                            <div class="portfolio__description">
+                                <h2 class="portfolio__title">Технокряк</h2>
+                                <p class="portfolio__text">Веб-сайт</p>
+                            </div>
                         </a>
                     </li>
-                    <li class="contacts__item">
-                        <a href="tel:+380961111111" class="contacts__link">
-                            <svg class="contacts__icon" width="10" height="16">
-                                <use href="./images/sprite.svg#icon-smartphone"></use>
-                            </svg>+38 096 111 11 11
+
+                    <li class="portfolio__item">
+                        <a href="/" class="portfolio__link">
+                            <div class="portfolio__thumb">
+                                <picture>
+                                    <source
+                                        srcset="./images/desktop/portfolio/poster_no_gs.jpg 1x, ./images/desktop/portfolio/poster_no_gs@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/tablet/portfolio/poster_no_gs_tab.jpg 1x, ./images/tablet/portfolio/poster_no_gs_tab@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/mobile/portfolio/poster_no_gs_mob.jpg 1x, ./images/mobile/portfolio/poster_no_gs_mob@2x.jpg 2x"
+                                        media="(min-width: 480px)">
+                                    <img class="portfolio__img" src="./images/desktop/portfolio/poster_no_gs.jpg"
+                                        alt="Постер New Orlean vs Golden Star" width="370" />
+                                </picture>
+                                <p class="portfolio__overlay">В дизайне постера New Orlean vs Golden Star мы вынуждены
+                                    отталкиваться от того, что внедрение современных методик позволяет оценить
+                                    значение распределения внутренних резервов и ресурсов.</p>
+                            </div>
+                            <div class="portfolio__description">
+                                <h2 class="portfolio__title">Постер New Orlean vs Golden Star</h2>
+                                <p class="portfolio__text">Дизайн</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="portfolio__item">
+                        <a href="/" class="portfolio__link">
+                            <div class="portfolio__thumb">
+                                <picture>
+                                    <source
+                                        srcset="./images/desktop/portfolio/the_seeafood_restaurant.jpg 1x, ./images/desktop/portfolio/the_seeafood_restaurant@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/tablet/portfolio/the_seeafood_restaurant_tab.jpg 1x, ./images/tablet/portfolio/the_seeafood_restaurant_tab@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/mobile/portfolio/the_seeafood_restaurant_mob.jpg 1x, ./images/mobile/portfolio/the_seeafood_restaurant_mob@2x.jpg 2x"
+                                        media="(min-width: 480px)">
+                                
+                                        <img class="portfolio__img" src="./images/desktop/portfolio/the_seeafood_restaurant.jpg"
+                                            alt="Ресторан Seafood" width="370" />
+                                </picture>
+                                <p class="portfolio__overlay">Ресторан Seafood - высококачественный прототип будущего
+                                    проекта напрямую зависит от анализа существующих паттернов поведения.</p>
+                            </div>
+                            <div class="portfolio__description">
+                                <h2 class="portfolio__title">Ресторан Seafood</h2>
+                                <p class="portfolio__text">Приложение</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="portfolio__item">
+                        <a href="/" class="portfolio__link">
+                            <div class="portfolio__thumb">
+                                <picture>
+                                    <source
+                                        srcset="./images/desktop/portfolio/prime_project.jpg 1x, ./images/desktop/portfolio/prime_project@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/tablet/portfolio/prime_project_tab.jpg 1x, ./images/tablet/portfolio/prime_project_tab@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/mobile/portfolio/prime_project_mob.jpg 1x, ./images/mobile/portfolio/prime_project_mob@2x.jpg 2x"
+                                        media="(min-width: 480px)">
+                           
+                                        <img class="portfolio__img" src="./images/desktop/portfolio/prime_project.jpg"
+                                            alt="Проект Prime" width="370" />
+                                </picture>
+                                <p class="portfolio__overlay">Проект Prime это идейные соображения высшего порядка, а
+                                    также перспективное планирование позволяет оценить значение позиций, занимаемых
+                                    участниками в отношении поставленных задач.</p>
+                            </div>
+                            <div class="portfolio__description">
+                                <h2 class="portfolio__title">Проект Prime</h2>
+                                <p class="portfolio__text">Маркетинг</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="portfolio__item">
+                        <a href="/" class="portfolio__link">
+                            <div class="portfolio__thumb">
+                                <picture>
+                                    <source
+                                        srcset="./images/desktop/portfolio/boxes_project.jpg 1x, ./images/desktop/portfolio/boxes_project@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/tablet/portfolio/boxes_project_tab.jpg 1x, ./images/tablet/portfolio/boxes_project_tab@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/mobile/portfolio/boxes_project_mob.jpg 1x, ./images/mobile/portfolio/boxes_project_mob@2x.jpg 2x"
+                                        media="(min-width: 480px)">
+                            
+                                        <img class="portfolio__img" src="./images/desktop/portfolio/boxes_project.jpg"
+                                            alt="Проект Boxes" width="370" />
+                                </picture>
+                                <p class="portfolio__overlay">Проект Boxes это интерактивные прототипы, которые лишь
+                                    добавляют фракционных разногласий и обнародованы.</p>
+                            </div>
+                            <div class="portfolio__description">
+                                <h2 class="portfolio__title">Проект Boxes</h2>
+                                <p class="portfolio__text">Приложение</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="portfolio__item">
+                        <a href="/" class="portfolio__link">
+                            <div class="portfolio__thumb">
+                                <picture>
+                                    <source
+                                        srcset="./images/desktop/portfolio/inspiration.jpg 1x, ./images/desktop/portfolio/inspiration@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/tablet/portfolio/inspiration_tab.jpg 1x, ./images/tablet/portfolio/inspiration_tab@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/mobile/portfolio/inspiration_mob.jpg 1x, ./images/mobile/portfolio/inspiration_mob@2x.jpg 2x"
+                                        media="(min-width: 480px)">
+                          
+                                        <img class="portfolio__img" src="./images/desktop/portfolio/inspiration.jpg"
+                                            alt="Inspiration has no Borders" width="370" />
+                                </picture>
+                                <p class="portfolio__overlay">Имеется спорная точка зрения, гласящая примерно
+                                    следующее: предприниматели в сети интернет могут быть смешаны с не уникальными
+                                    данными до степени совершенной неузнаваемости.</p>
+                            </div>
+                            <div class="portfolio__description">
+                                <h2 class="portfolio__title" lang="en">Inspiration has no Borders</h2>
+                                <p class="portfolio__text">Веб-сайт</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="portfolio__item">
+                        <a href="/" class="portfolio__link">
+                            <div class="portfolio__thumb">
+                                <picture>
+                                    <source
+                                        srcset="./images/desktop/portfolio/limited_edition.jpg 1x, ./images/desktop/portfolio/limited_edition@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/tablet/portfolio/limited_edition_tab.jpg 1x, ./images/tablet/portfolio/limited_edition_tab@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/mobile/portfolio/limited_edition_mob.jpg 1x, ./images/mobile/portfolio/limited_edition_mob@2x.jpg 2x"
+                                        media="(min-width: 480px)">
+                             
+                                        <img class="portfolio__img" src="./images/desktop/portfolio/limited_edition.jpg"
+                                            alt="Издание Limited Edition" width="370" />
+                                </picture>
+                                <p class="portfolio__overlay">Как уже неоднократно упомянуто Limited Edition, диаграммы
+                                    связей призывают нас к новым свершениям, которые, в свою очередь, должны быть
+                                    разоблачены.</p>
+                            </div>
+                            <div class="portfolio__description">
+                                <h2 class="portfolio__title">Издание Limited Edition</h2>
+                                <p class="portfolio__text">Дизайн</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="portfolio__item">
+                        <a href="/" class="portfolio__link">
+                            <div class="portfolio__thumb">
+                                <picture>
+                                    <source
+                                        srcset="./images/desktop/portfolio/lab_project.jpg 1x, ./images/desktop/portfolio/lab_project@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/tablet/portfolio/lab_project_tab.jpg 1x, ./images/tablet/portfolio/lab_project_tab@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/mobile/portfolio/lab_project_mob.jpg 1x, ./images/mobile/portfolio/lab_project_mob@2x.jpg 2x"
+                                        media="(min-width: 480px)">
+                           
+                                        <img class="portfolio__img" src="./images/desktop/portfolio/lab_project.jpg"
+                                            alt="Проект LAB" width="370" />
+                                </picture>
+                                <p class="portfolio__overlay">Безусловно, постоянное информационно-пропагандистское
+                                    обеспечение нашей деятельности в значительной степени обусловливает важность
+                                    стандартных подходов!</p>
+                            </div>
+                            <div class="portfolio__description">
+                                <h2 class="portfolio__title">Проект LAB</h2>
+                                <p class="portfolio__text">Маркетинг</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="portfolio__item">
+                        <a href="/" class="portfolio__link">
+                            <div class="portfolio__thumb">
+                                <picture>
+                                    <source
+                                        srcset="./images/desktop/portfolio/growing_business.jpg 1x, ./images/desktop/portfolio/growing_business@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/tablet/portfolio/growing_business_tab.jpg 1x, ./images/tablet/portfolio/growing_business_tab@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/mobile/portfolio/growing_business_mob.jpg 1x, ./images/mobile/portfolio/growing_business_mob@2x.jpg 2x"
+                                        media="(min-width: 480px)">
+                     
+                                        <img class="portfolio__img" src="./images/desktop/portfolio/growing_business.jpg"
+                                            alt="Growing Business" width="370" />
+                                </picture>
+                                <p class="portfolio__overlay">Growing Business, как элементы политического процесса
+                                    функционально разнесены на независимые элементы.</p>
+                            </div>
+                            <div class="portfolio__description">
+                                <h2 class="portfolio__title" lang="en">Growing Business</h2>
+                                <p class="portfolio__text">Приложение</p>
+                            </div>
                         </a>
                     </li>
                 </ul>
             </div>
-    </header>
-    <main>
-     
-        <section class="section">
-            <div class="container">
-                <h1 class="section__title visually-hidden">Портфолио</h1>
-                    <ul class="section__menu-panel menu-panel">
-                        <li class="menu-panel__item">
-                            <button type="button" class="menu-panel__button">Все</button>
-                        </li>
-                        <li class="menu-panel__item">
-                            <button type="button" class="menu-panel__button">Веб-сайты</button>
-                        </li>
-                        <li class="menu-panel__item">
-                            <button type="button" class="menu-panel__button">Приложения</button>
-                        </li>
-                        <li class="menu-panel__item">
-                            <button type="button" class="menu-panel__button">Дизайн</button>
-                        </li>
-                        <li class="menu-panel__item">
-                            <button type="button" class="menu-panel__button">Маркетинг</button>
-                        </li>
-                    </ul>
-                <!-- галерея портфолио -->
-                    <ul class="section__portfolio portfolio">
-                        <li class="portfolio__item">
-                            <a href="/" class="portfolio__link">
-                                <div class="portfolio__thumb">
-                                    <img class="portfolio__img" src="./images/techno_crack.jpg" alt="Технокряк"
-                                        width="370" />
-                                    <p class="portfolio__overlay">Технокряк это современная площадка распространения
-                                        коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на
-                                        защищённые сервера конкурентов.</p>
-                                </div>
-                                <div class="portfolio__description">
-                                    <h2 class="portfolio__title">Технокряк</h2>
-                                    <p class="portfolio__text">Веб-сайт</p>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="portfolio__item">
-                            <a href="/" class="portfolio__link">
-                                <div class="portfolio__thumb">
-                                    <img class="portfolio__img" src="./images/poster_no_gs.jpg"
-                                        alt="Постер New Orlean vs Golden Star" width="370" />
-                                    <p class="portfolio__overlay">В дизайне постера New Orlean vs Golden Star мы вынуждены
-                                        отталкиваться от того, что внедрение современных методик позволяет оценить
-                                        значение распределения внутренних резервов и ресурсов.</p>
-                                </div>
-                                <div class="portfolio__description">
-                                    <h2 class="portfolio__title">Постер New Orlean vs Golden Star</h2>
-                                    <p class="portfolio__text">Дизайн</p>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="portfolio__item">
-                            <a href="/" class="portfolio__link">
-                                <div class="portfolio__thumb">
-                                    <img class="portfolio__img" src="./images/the_seeafood_restaurant.jpg"
-                                        alt="Ресторан Seafood" width="370" />
-                                    <p class="portfolio__overlay">Ресторан Seafood - высококачественный прототип будущего
-                                        проекта напрямую зависит от анализа существующих паттернов поведения.</p>
-                                </div>
-                                <div class="portfolio__description">
-                                    <h2 class="portfolio__title">Ресторан Seafood</h2>
-                                    <p class="portfolio__text">Приложение</p>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="portfolio__item">
-                            <a href="/" class="portfolio__link">
-                                <div class="portfolio__thumb">
-                                    <img class="portfolio__img" src="./images/prime_project.jpg" alt="Проект Prime"
-                                        width="370" />
-                                    <p class="portfolio__overlay">Проект Prime это идейные соображения высшего порядка, а
-                                        также перспективное планирование позволяет оценить значение позиций, занимаемых
-                                        участниками в отношении поставленных задач.</p>
-                                </div>
-                                <div class="portfolio__description">
-                                    <h2 class="portfolio__title">Проект Prime</h2>
-                                    <p class="portfolio__text">Маркетинг</p>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="portfolio__item">
-                            <a href="/" class="portfolio__link">
-                                <div class="portfolio__thumb">
-                                    <img class="portfolio__img" src="./images/boxes_project.jpg" alt="Проект Boxes"
-                                        width="370" />
-                                    <p class="portfolio__overlay">Проект Boxes это интерактивные прототипы, которые лишь
-                                        добавляют фракционных разногласий и обнародованы.</p>
-                                </div>
-                                <div class="portfolio__description">
-                                    <h2 class="portfolio__title">Проект Boxes</h2>
-                                    <p class="portfolio__text">Приложение</p>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="portfolio__item">
-                            <a href="/" class="portfolio__link">
-                                <div class="portfolio__thumb">
-                                    <img class="portfolio__img" src="./images/inspiration.jpg"
-                                        alt="Inspiration has no Borders" width="370" />
-                                    <p class="portfolio__overlay">Имеется спорная точка зрения, гласящая примерно
-                                        следующее: предприниматели в сети интернет могут быть смешаны с не уникальными
-                                        данными до степени совершенной неузнаваемости.</p>
-                                </div>
-                                <div class="portfolio__description">
-                                    <h2 class="portfolio__title" lang="en">Inspiration has no Borders</h2>
-                                    <p class="portfolio__text">Веб-сайт</p>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="portfolio__item">
-                            <a href="/" class="portfolio__link">
-                                <div class="portfolio__thumb">
-                                    <img class="portfolio__img" src="./images/limited_edition.jpg"
-                                        alt="Издание Limited Edition" width="370" />
-                                    <p class="portfolio__overlay">Как уже неоднократно упомянуто Limited Edition, диаграммы
-                                        связей призывают нас к новым свершениям, которые, в свою очередь, должны быть
-                                        разоблачены.</p>
-                                </div>
-                                <div class="portfolio__description">
-                                    <h2 class="portfolio__title">Издание Limited Edition</h2>
-                                    <p class="portfolio__text">Дизайн</p>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="portfolio__item">
-                            <a href="/" class="portfolio__link">
-                                <div class="portfolio__thumb">
-                                    <img class="portfolio__img" src="./images/lab_project.jpg" alt="Проект LAB"
-                                        width="370" />
-                                    <p class="portfolio__overlay">Безусловно, постоянное информационно-пропагандистское
-                                        обеспечение нашей деятельности в значительной степени обусловливает важность
-                                        стандартных подходов!</p>
-                                </div>
-                                <div class="portfolio__description">
-                                    <h2 class="portfolio__title">Проект LAB</h2>
-                                    <p class="portfolio__text">Маркетинг</p>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="portfolio__item">
-                            <a href="/" class="portfolio__link">
-                                <div class="portfolio__thumb">
-                                    <img class="portfolio__img" src="./images/growig_bussines.jpg"
-                                        alt="Growing Business" width="370" />
-                                    <p class="portfolio__overlay">Growig Business, как элементы политического процесса
-                                        функционально разнесены на независимые элементы.</p>
-                                </div>
-                                <div class="portfolio__description">
-                                    <h2 class="portfolio__title" lang="en">Growig Business</h2>
-                                    <p class="portfolio__text">Приложение</p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
         </section>
     </main>
-   <!-- footer -->
+    <!-- footer -->
     <footer class="page-footer">
         <div class="container container__page-footer">
             <div class="page-footer__wrapper">
-                <a href="./index.html" class="page-footer__logo logo">Web<span
-                        class="logo__white">Studio
+                <a href="./index.html" class="page-footer__logo logo">Web<span class="logo__white">Studio
                     </span>
                 </a>
                 <address>
                     <ul class="address">
                         <li class="address__item">
                             <a href="https://goo.gl/maps/7974E7wmpm6zUWJ98"
-                                class="address__link address__link--white">г.
+                                class="address__link address__link--location">г.
                                 Киев, пр-т Леси
                                 Украинки, 26
                             </a>
                         </li>
                         <li class="address__item">
-                            <a href="mailto:info@devstudio.com"
-                                class="address__link ">info@devstudio.com
+                            <a href="mailto:info@devstudio.com" class="address__link ">info@devstudio.com
                             </a>
                         </li>
                         <li class="address__item">
@@ -252,8 +379,8 @@
                 </address>
             </div>
             <!-- соцсети футера -->
-            <div class="page-footer__social-thumb">    
-            <p class="page-footer__text">присоединяйтесь</p>
+            <div class="page-footer__social-thumb">
+                <p class="page-footer__text">присоединяйтесь</p>
                 <ul class="social">
                     <li class="social__item">
                         <a href="" class="social__link social__link--grey-bcg">
@@ -284,22 +411,22 @@
                         </a>
                     </li>
                 </ul>
-                </div>
+            </div>
             <!-- рассылка -->
-                <form class="page-footer__form mailing-form js-form" autocomplete="off">
-                    <label for="user_mail" class="mailing-form__label ">Подпишитесь на рассылку</label>
-                    <div class="mailing-form__input-wrapper">
-                        <input id="user_mail" type="email" name="email" class="mailing-form__input"
-                            placeholder="E-mail" />
-                        <button type="submit" class="mailing-form__button ">Подписаться
-                            <svg class="mailing-form__icon">
-                                <use href="./images/icons.svg#icon-send"></use>
-                            </svg>
-                        </button>
-                    </div>
-                </form>
+            <form class="page-footer__form mailing-form js-form" autocomplete="off">
+                <label for="user_mail" class="mailing-form__label ">Подпишитесь на рассылку</label>
+                <div class="mailing-form__input-wrapper">
+                    <input id="user_mail" type="email" name="email" class="mailing-form__input" placeholder="E-mail" />
+                    <button type="submit" class="mailing-form__button main-btn">Подписаться
+                        <svg class="mailing-form__icon">
+                            <use href="./images/icons.svg#icon-send"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
         </div>
     </footer>
-    </body>
+    <script src="./js/mobile-menu.js"></script>
+</body>
 
 </html>

@@ -1,19 +1,34 @@
 .menu-panel {
     display: flex;
-    justify-content: center;
-}
+    flex-wrap: wrap;
+    margin-bottom: 40px;
 
-.section__menu-panel {
-margin-bottom: 50px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
+    }
 }
 
 .menu-panel__item {
-    margin-right: 8px;
+    @media screen and (max-width: $mobile) {
+        margin-bottom: 15px;
 
-    &:last-child {
-        margin-right: 0;
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
     }
 }
+
 .menu-panel__button {
     border: transparent;
     border-radius: 4px;

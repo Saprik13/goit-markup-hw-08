@@ -1,12 +1,13 @@
 .team {
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
+
     @media screen and (min-width: 768px) and (max-width: $tablet) {
         flex-wrap: wrap;
         margin: -15px;
     }
 
-    @media screen and (min-width: 768px) {
-        display: flex;
-    }
 }
 
 .team__item {
@@ -24,10 +25,6 @@
     @media screen and (min-width: 768px) and (max-width: $tablet) {
         margin: 15px;
         width: calc((100% - 4 * 15px) / 2);
-    }
-
-    @media screen and (min-width: 768px) and (max-width: $tablet) {
-        margin: 15px;
     }
 
     @media screen and (min-width: $desktop) {

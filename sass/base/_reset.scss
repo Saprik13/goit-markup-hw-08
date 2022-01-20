@@ -10,6 +10,10 @@ body {
     background-color: #fff;
 }
 
+body.modal-open {
+    overflow: hidden;
+}
+
 address {
     font-style: normal;
 }

@@ -1,8 +1,7 @@
 .page-header {
     border-bottom: 1px solid #ececec;
 
-    @media screen and (min-width: $tablet),
-    (min-width: $mobile) {
+    @media screen and (min-width: 768px) {
         position: sticky;
         top: -1px;
         background-color: rgba(255, 255, 255, 0.9);
@@ -19,13 +18,6 @@
     @media screen and (min-width: 768px) {
         display: flex;
         align-items: center;
-    }
-}
-
-.navigation-wrapper {
-    @media screen and (max-width: $mobile) {
-        position: relative;
-        margin-bottom: 32px;
     }
 }
 
@@ -112,7 +104,7 @@
     @media screen and (max-width: $mobile) {
         display: flex;
         flex-direction: column-reverse;
-        margin-bottom: 64px;
+
     }
 
     @media screen and (min-width: $desktop) {
@@ -121,13 +113,17 @@
     }
 }
 
+
+
 .contacts__item {
     @media screen and (max-width: $mobile) {
         margin-bottom: 32px;
-    }
-}
 
-.contacts__item {
+        &:nth-child(1) {
+            margin-bottom: 64px;
+        }
+    }
+
     &:not(:last-child) {
         @media screen and (min-width: 768px) and (max-width: $tablet) {
             margin-bottom: 10px;
@@ -176,6 +172,7 @@
     &--mail {
         @media screen and (max-width: $mobile) {
             font-size: 24px;
+            font-weight: 500;
             line-height: 1.17;
         }
     }
@@ -185,6 +182,7 @@
     &--phone {
         @media screen and (max-width: $mobile) {
             font-size: 34px;
+            font-weight: 500;
             line-height: 1.18;
             color: var(--accent-color);
         }

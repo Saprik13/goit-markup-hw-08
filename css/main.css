@@ -1694,7 +1694,12 @@ img {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   margin-bottom: 40px;
-  margin-top: -15px;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-filter {
+    margin-top: -15px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1895,16 +1900,24 @@ img {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .container__page-footer {
-    -webkit-justify-content: space-around;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px), (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .container__page-footer {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1994,6 +2007,7 @@ img {
 }
 
 .page-footer__text {
+  display: block;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -2054,6 +2068,7 @@ img {
 }
 
 .mailing-form__input {
+  width: 100%;
   color: rgba(255, 255, 255, 0.6);
   padding: 15px 16px;
   height: 50px;
@@ -2066,10 +2081,23 @@ img {
   transition: border 250ms var(--timing-function);
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px), (max-width: 767px) {
+.mailing-form__input:hover, .mailing-form__input:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.mailing-form__input:not(placeholder-shown) {
+  color: #fff;
+}
+
+@media screen and (max-width: 767px), (min-width: 768px) and (max-width: 1199px) {
   .mailing-form__input {
-    max-width: 100%;
     margin: 20px 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .mailing-form__input {
+    width: 450px;
   }
 }
 
@@ -2077,14 +2105,6 @@ img {
   .mailing-form__input {
     width: 358px;
   }
-}
-
-.mailing-form__input:hover, .mailing-form__input:focus {
-  border: 1px solid var(--accent-color);
-}
-
-.mailing-form__input:not(placeholder-shown) {
-  color: #fff;
 }
 
 .mailing-form__button {

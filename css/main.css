@@ -1911,9 +1911,10 @@ img {
     -webkit-align-items: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
-    -webkit-justify-content: space-around;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -1988,6 +1989,12 @@ img {
   color: #fff;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .page-footer__form {
+    margin: 0 auto;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .page-footer__social-thumb {
     margin-bottom: 60px;
@@ -2050,7 +2057,6 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #fff;
-  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1200px) {

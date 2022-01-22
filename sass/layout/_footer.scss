@@ -8,7 +8,7 @@
         display: flex;
         flex-wrap: wrap;
         align-items: baseline;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     @media screen and (min-width: $desktop) {
@@ -24,6 +24,7 @@
 
     @media screen and (max-width: $tablet) {
         text-align: center;
+
     }
 
     @media screen and (min-width: $desktop) {
@@ -66,6 +67,12 @@
 
     &--location {
         color: #fff;
+    }
+}
+
+.page-footer__form {
+    @media screen and (min-width: 768px) and (max-width: $tablet) {
+        margin: 0 auto;
     }
 }
 
@@ -127,7 +134,7 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #fff;
-    margin-bottom: 20px;
+
 }
 
 .mailing-form__input-wrapper {

@@ -65,8 +65,7 @@
     }
 }
 
-.page-header__menu-icon:hover,
-.page-header__menu-icon:focus {
+.page-header__menu-icon:active {
     fill: var(--accent-color);
 }
 
